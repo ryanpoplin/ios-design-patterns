@@ -10,6 +10,8 @@ import UIKit
 
 class LibraryAPI: NSObject {
 
+	// The Facade design pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API.
+	
 	private let persistencyManager: PersistencyManager
 	private let httpClient: HTTPClient
 	private let isOnline: Bool
