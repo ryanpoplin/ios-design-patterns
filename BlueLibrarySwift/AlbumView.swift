@@ -10,6 +10,8 @@ import UIKit
 
 class AlbumView: UIView {
 
+	// View: The objects that are in charge of the visual representation of the Model and the controls the user can interact with; basically, all the UIView-derived objects.
+	
 	private var coverImage: UIImageView!
 	private var indicator: UIActivityIndicatorView!
 	

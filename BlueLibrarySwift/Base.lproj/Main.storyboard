@@ -24,7 +24,7 @@
         <!--Pop Music-->
         <scene sceneID="m0R-Ey-E3U">
             <objects>
-                <viewController id="4JQ-qw-sF2" customClass="ViewController" customModule="BlueLibrarySwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4JQ-qw-sF2" customClass="AlbumViewController" customModule="BlueLibrarySwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6CL-dg-K1s"/>
                         <viewControllerLayoutGuide type="bottom" id="sKo-9c-XOB"/>

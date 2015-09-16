@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		101DD6CB1A052EDE00161F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6CA1A052EDE00161F0D /* AppDelegate.swift */; };
-		101DD6CD1A052EDE00161F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6CC1A052EDE00161F0D /* ViewController.swift */; };
+		101DD6CD1A052EDE00161F0D /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6CC1A052EDE00161F0D /* AlbumViewController.swift */; };
 		101DD6D01A052EDE00161F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6CE1A052EDE00161F0D /* Main.storyboard */; };
 		101DD6D21A052EDE00161F0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6D11A052EDE00161F0D /* Images.xcassets */; };
 		101DD6D51A052EDE00161F0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6D31A052EDE00161F0D /* LaunchScreen.xib */; };
@@ -16,6 +16,9 @@
 		101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6EB1A052F0E00161F0D /* HTTPClient.swift */; };
 		5A28C61E1BA8FD0C008B8536 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C61D1BA8FD0C008B8536 /* Album.swift */; };
 		5A28C6201BA9086D008B8536 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C61F1BA9086D008B8536 /* AlbumView.swift */; };
+		5A28C6261BA93699008B8536 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C6251BA93699008B8536 /* LibraryAPI.swift */; };
+		5A28C6281BA98F2F008B8536 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C6271BA98F2F008B8536 /* PersistencyManager.swift */; };
+		5A28C62A1BA99885008B8536 /* AlbumExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C6291BA99885008B8536 /* AlbumExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,7 @@
 		101DD6C51A052EDE00161F0D /* BlueLibrarySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueLibrarySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101DD6C91A052EDE00161F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101DD6CA1A052EDE00161F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		101DD6CC1A052EDE00161F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		101DD6CC1A052EDE00161F0D /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		101DD6CF1A052EDE00161F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		101DD6D11A052EDE00161F0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		101DD6D41A052EDE00161F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		101DD6EB1A052F0E00161F0D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		5A28C61D1BA8FD0C008B8536 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		5A28C61F1BA9086D008B8536 /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		5A28C6251BA93699008B8536 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		5A28C6271BA98F2F008B8536 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		5A28C6291BA99885008B8536 /* AlbumExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +89,13 @@
 		101DD6C71A052EDE00161F0D /* BlueLibrarySwift */ = {
 			isa = PBXGroup;
 			children = (
-				101DD6EA1A052EE400161F0D /* API */,
-				101DD6CA1A052EDE00161F0D /* AppDelegate.swift */,
-				5A28C61D1BA8FD0C008B8536 /* Album.swift */,
-				5A28C61F1BA9086D008B8536 /* AlbumView.swift */,
-				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
 				101DD6CE1A052EDE00161F0D /* Main.storyboard */,
-				101DD6D11A052EDE00161F0D /* Images.xcassets */,
 				101DD6D31A052EDE00161F0D /* LaunchScreen.xib */,
+				5A28C6231BA934C9008B8536 /* Controllers */,
+				5A28C6221BA934BE008B8536 /* Views */,
+				5A28C6211BA9349F008B8536 /* Models */,
+				101DD6EA1A052EE400161F0D /* API */,
+				5A28C62B1BA9988D008B8536 /* Extenstions */,
 				101DD6C81A052EDE00161F0D /* Supporting Files */,
 			);
 			path = BlueLibrarySwift;
@@ -99,6 +104,8 @@
 		101DD6C81A052EDE00161F0D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				101DD6CA1A052EDE00161F0D /* AppDelegate.swift */,
+				101DD6D11A052EDE00161F0D /* Images.xcassets */,
 				101DD6C91A052EDE00161F0D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -124,9 +131,43 @@
 		101DD6EA1A052EE400161F0D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				5A28C6251BA93699008B8536 /* LibraryAPI.swift */,
 				101DD6EB1A052F0E00161F0D /* HTTPClient.swift */,
+				5A28C6271BA98F2F008B8536 /* PersistencyManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		5A28C6211BA9349F008B8536 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A28C61D1BA8FD0C008B8536 /* Album.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5A28C6221BA934BE008B8536 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A28C61F1BA9086D008B8536 /* AlbumView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A28C6231BA934C9008B8536 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				101DD6CC1A052EDE00161F0D /* AlbumViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A28C62B1BA9988D008B8536 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				5A28C6291BA99885008B8536 /* AlbumExtensions.swift */,
+			);
+			name = Extenstions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				101DD6CD1A052EDE00161F0D /* ViewController.swift in Sources */,
+				101DD6CD1A052EDE00161F0D /* AlbumViewController.swift in Sources */,
+				5A28C62A1BA99885008B8536 /* AlbumExtensions.swift in Sources */,
 				101DD6CB1A052EDE00161F0D /* AppDelegate.swift in Sources */,
+				5A28C6261BA93699008B8536 /* LibraryAPI.swift in Sources */,
 				101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */,
 				5A28C6201BA9086D008B8536 /* AlbumView.swift in Sources */,
 				5A28C61E1BA8FD0C008B8536 /* Album.swift in Sources */,
+				5A28C6281BA98F2F008B8536 /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

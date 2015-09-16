@@ -10,6 +10,8 @@ import UIKit
 
 class Album: NSObject {
 
+	// Model: The object that holds your application data and defines how to manipulate it.
+	
 	var title: String!
 	var artist: String!
 	var genre: String!
