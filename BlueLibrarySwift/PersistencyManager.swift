@@ -8,12 +8,13 @@
 
 import UIKit
 
-class PersistencyManager: NSObject {
+class PersistencyManager: NSObject/*, AlbumDataDelegate*/ {
 
-	private var albums = [Album]()
+	private var musicAlbums = [Album]()
 	
 	override init() {
-
+		super.init()
+		
 		let album1 = Album(title: "Best of Bowie",
 			artist: "David Bowie",
 			genre: "Pop",
@@ -32,24 +33,32 @@ class PersistencyManager: NSObject {
 			coverUrl: "http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png",
 			year: "1999")
 		
-		albums = [album1, album2, album3]
-		
+		musicAlbums = [album1, album2, album3]
+		// HTTPClient().setDelegate(self)
 	}
 	
+	// MARK: - AlbumDataDelegate Method 
+	
+//	func didGetAlbums(albums: [Album]) {
+//		musicAlbums = albums
+//	}
+	
+	// MARK: -
+	
 	func getAlbums() -> [Album] {
-		return albums
+		return musicAlbums
 	}
 	
 	func addAlbum(album: Album, index: Int) {
-		if albums.count >= index {
-			albums.insert(album, atIndex: index)
+		if musicAlbums.count >= index {
+			musicAlbums.insert(album, atIndex: index)
 		} else {
-			albums.append(album)
+			musicAlbums.append(album)
 		}
 	}
 	
 	func deleteAlbumAtIndex(index: Int) {
-		albums.removeAtIndex(index)
+		musicAlbums.removeAtIndex(index)
 	}
 	
 }

@@ -58,6 +58,10 @@ class AlbumViewController: UIViewController {
 		}
 		dataTable!.reloadData()
 	}
+	
+	func didGetAlbums(albums: [Album]) {
+		
+	}
 
 }
 

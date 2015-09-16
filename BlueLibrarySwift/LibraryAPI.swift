@@ -25,6 +25,7 @@ class LibraryAPI: NSObject {
 	}
 	
 	func getAlbums() -> [Album] {
+		// httpClient.mockGetRequest()
 		return persistencyManager.getAlbums()
 	}
 	

@@ -22,7 +22,37 @@
 
 import UIKit
 
-class HTTPClient {
+//protocol AlbumDataDelegate {
+//	func didGetAlbums(albums: [Album])
+//}
+
+public class HTTPClient {
+	
+	// var delegate: AlbumDataDelegate?
+	
+//	func mockGetRequest() {
+//		
+//		let album1 = Album(title: "Best of Bowie",
+//			artist: "David Bowie",
+//			genre: "Pop",
+//			coverUrl: "http://www.coversproject.com/static/thumbs/album/album_david%20bowie_best%20of%20bowie.png",
+//			year: "1992")
+//		
+//		let album2 = Album(title: "It's My Life",
+//			artist: "No Doubt",
+//			genre: "Pop",
+//			coverUrl: "http://www.coversproject.com/static/thumbs/album/album_no%20doubt_its%20my%20life%20%20bathwater.png",
+//			year: "2003")
+//		
+//		let album3 = Album(title: "Nothing Like The Sun",
+//			artist: "Sting",
+//			genre: "Pop",
+//			coverUrl: "http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png",
+//			year: "1999")
+//	
+//		delegateAlbums([album1, album2, album3])
+//	
+//	}
 	
 	func getRequest(url: String) -> (AnyObject) {
 		return NSData()
@@ -38,5 +68,18 @@ class HTTPClient {
 		let image = UIImage(data: data!)
 		return image!
 	}
+	
+//	// ...
+//	func setDelegate(persistencyManager: PersistencyManager) {
+//		delegate = persistencyManager
+//	}
+	
+//	func delegateAlbums(albums: [Album]) {
+//		if delegate != nil {
+//			delegate?.didGetAlbums(albums)
+//		} else {
+//			print("The delegate is nil...")
+//		}
+//	}
 	
 }
