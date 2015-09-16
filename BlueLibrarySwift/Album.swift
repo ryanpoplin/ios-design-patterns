@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Album: NSObject {
+public class Album: NSObject {
 
 	// Model: The object that holds your application data and defines how to manipulate it.
 	
@@ -27,7 +27,7 @@ class Album: NSObject {
 		self.year = year
 	}
 	
-	override var description: String {
+	override public var description: String {
 		return "title: \(title)" +
 			   "artist: \(artist)" +
 			   "genre: \(genre)" +

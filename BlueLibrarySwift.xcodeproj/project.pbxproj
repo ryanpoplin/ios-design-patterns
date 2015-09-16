@@ -48,6 +48,7 @@
 		5A28C6251BA93699008B8536 /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		5A28C6271BA98F2F008B8536 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		5A28C6291BA99885008B8536 /* AlbumExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumExtensions.swift; sourceTree = "<group>"; };
+		5A28C62F1BA9F769008B8536 /* OOP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OOP.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 				101DD6EA1A052EE400161F0D /* API */,
 				5A28C62B1BA9988D008B8536 /* Extenstions */,
 				101DD6C81A052EDE00161F0D /* Supporting Files */,
+				5A28C62F1BA9F769008B8536 /* OOP.playground */,
 			);
 			path = BlueLibrarySwift;
 			sourceTree = "<group>";
