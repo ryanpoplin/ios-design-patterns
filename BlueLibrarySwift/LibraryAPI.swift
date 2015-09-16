@@ -13,12 +13,10 @@ class LibraryAPI: NSObject {
 	// The Facade design pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API.
 	
 	private let persistencyManager: PersistencyManager
-	private let httpClient: HTTPClient
 	private let isOnline: Bool
 	
 	override init() {
 		persistencyManager = PersistencyManager()
-		httpClient = HTTPClient()
 		// mock server, unless I want to plug up Loopi-API
 		isOnline = false
 		super.init()
@@ -60,3 +58,7 @@ class LibraryAPI: NSObject {
 	}
 	
 }
+
+// FIXME: - what's a good pattern to get access to this instance?
+let httpClient = HTTPClient()
+

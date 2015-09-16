@@ -10,12 +10,12 @@ import UIKit
 
 class PersistencyManager: NSObject, AlbumDataDelegate {
 
-	private var httpClient: HTTPClient!
 	private var musicAlbums = [Album]()
 	
 	override init() {
 		super.init()
 		
+		// FIXME: - 
 		httpClient.delegate = self
 		
 //		let album1 = Album(title: "Best of Bowie",
