@@ -98,7 +98,7 @@ class User {
 
 protocol SwiftProtocol { }
 
-class AnotherSwiftClass: SwiftProtocol {}
+class AnotherSwiftClass: SwiftProtocol {  }
 
 protocol Targetable {
 	var life: Int { get set }
@@ -144,10 +144,57 @@ class Player {
 
 var terminator = Player(weapon: Pistol())
 var enemy = Enemy()
-
-var i: Int
 terminator.shoot(enemy)
-
 terminator.weapon = Shotgun()
 terminator.shoot(enemy)
 
+class GraphicObject {
+	func draw() {
+		print("does nothing")
+	}
+}
+
+class SpaceShip: GraphicObject {
+//	override func draw() {
+//		print("draws a Space Ship")
+//	}
+}
+
+class EmpireSpaceShip: SpaceShip {
+	override func draw() {
+		print("draws an Empire Space Ship")
+	}
+}
+
+class RebellionSpaceShip: SpaceShip {
+	override func draw() {
+		print("draws a Rebellion Space Ship")
+	}
+}
+
+class DeathStar: GraphicObject {
+	override func draw() {
+		print("draws a Death Star")
+	}
+}
+
+let spaceShips = [EmpireSpaceShip(), RebellionSpaceShip(), DeathStar()]
+for spaceShip in spaceShips {
+	spaceShip.draw()
+}
+
+class Singleton {
+	
+	func saySomething() -> String {
+		return "Single Instance"
+	}
+	
+	struct Static {
+		static let instance = Singleton()
+	}
+	class var sharedInstance: Singleton {
+		return Static.instance
+	}
+}
+
+Singleton.sharedInstance.saySomething()
