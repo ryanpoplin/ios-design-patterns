@@ -198,3 +198,4 @@ class Singleton {
 }
 
 Singleton.sharedInstance.saySomething()
+
