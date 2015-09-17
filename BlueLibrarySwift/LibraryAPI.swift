@@ -17,7 +17,6 @@ class LibraryAPI: NSObject {
 	
 	override init() {
 		persistencyManager = PersistencyManager()
-		// mock server, unless I want to plug up Loopi-API
 		isOnline = false
 		super.init()
 	}
@@ -30,7 +29,6 @@ class LibraryAPI: NSObject {
 	func addAlbum(album: Album, index: Int) {
 		persistencyManager.addAlbum(album, index: index)
 		if isOnline {
-			// use Loopi-API...
 			httpClient.postRequest("", body: album.description)
 		}
 	}
@@ -56,7 +54,7 @@ class LibraryAPI: NSObject {
 		}
 		return Singleton.instance
 	}
-	
+
 }
 
 // FIXME: - what's a good pattern to get access to this instance?

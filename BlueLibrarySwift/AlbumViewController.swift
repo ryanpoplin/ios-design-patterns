@@ -35,14 +35,18 @@ class AlbumViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		self.navigationController?.navigationBar.translucent = false
 		currentAlbumIndex = 0
+		
 		allAlbums = LibraryAPI.sharedInstance.getAlbums()
+		
 		dataTable.delegate = self
 		dataTable.dataSource = self
 		dataTable.backgroundView = nil
 		view.addSubview(dataTable!)
 		self.showDataForAlbum(currentAlbumIndex)
+	
 	}
 
 	override func didReceiveMemoryWarning() {

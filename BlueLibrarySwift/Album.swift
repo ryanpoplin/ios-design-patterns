@@ -12,6 +12,7 @@ public class Album: NSObject {
 
 	// Model: The object that holds your application data and defines how to manipulate it.
 	
+	// if these properties should be privatized, and they're not because an extension needs them what's up?
 	var title: String!
 	var artist: String!
 	var genre: String!

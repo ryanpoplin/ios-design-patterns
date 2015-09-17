@@ -13,6 +13,7 @@ class PersistencyManager: NSObject, AlbumDataDelegate {
 	private var musicAlbums = [Album]()
 	
 	override init() {
+		
 		super.init()
 		
 		// FIXME: - 
