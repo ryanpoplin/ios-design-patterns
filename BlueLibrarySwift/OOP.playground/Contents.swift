@@ -179,6 +179,7 @@ class DeathStar: GraphicObject {
 }
 
 let spaceShips = [EmpireSpaceShip(), RebellionSpaceShip(), DeathStar()]
+
 for spaceShip in spaceShips {
 	spaceShip.draw()
 }
@@ -192,10 +193,96 @@ class Singleton {
 	struct Static {
 		static let instance = Singleton()
 	}
+	
 	class var sharedInstance: Singleton {
 		return Static.instance
 	}
+
 }
 
 Singleton.sharedInstance.saySomething()
 
+class Biologist {
+	private var name: String!
+	private var type: String!
+	private var assignments: [String: String]!
+	init(name: String, type: String, assignments: [String: String]) {
+		self.name = name
+		self.type = type
+		self.assignments = assignments
+	}
+	func listOutAssignments() -> [String: String] {
+		return assignments
+	}
+	func listOutResults(results: [String: String]) -> [String: String] {
+		return results
+	}
+}
+
+class Region {
+	private var climateType: String!
+	init(climateType: String) {
+		self.climateType = climateType
+	}
+	func listClimateType() -> String {
+		return climateType
+	}
+}
+
+class Frog {
+	private var type: String!
+	private var region: Region!
+	init(type: String, region: Region) {
+		self.type = type
+		self.region = region
+	}
+	func listType() -> String {
+		return type
+	}
+	func listRegion() -> Region {
+		return region
+	}
+}
+
+// Future Recs: add 'Climate' class and 'Food' class...
+// The API would get it's data from a UI in classical MVC...
+class BiologistFrogAnalysisAPI {
+	private var frogs: [String: Frog]!
+	private var regions: [String: Region]!
+	private var biologist: Biologist!
+	init() {
+		// if coming from web service, can be placed into a Store || ClientStore class
+		regions = [
+			"Mediterranean": Region(climateType: "Mediterranean"),
+			"Arid": Region(climateType: "Arid"),
+			"Tropical Wet": Region(climateType: "Tropical Wet"),
+			"Highland": Region(climateType: "Highland")
+		]
+		frogs = [
+			"Yellow": Frog(type: "Yellow", region: regions["Mediterranean"]!),
+			"Brown": Frog(type: "Brown", region: regions["Arid"]!),
+			"Red": Frog(type: "Red", region: regions["Tropical Wet"]!),
+			"Blue": Frog(type: "Blue", region: regions["Highland"]!)
+		]
+		biologist = Biologist(name: "Ryan Poplin", type: "Amphibian", assignments: ["1": "When a frog switches regions, what happens to their reproduction and diet status?"])
+	}
+	func listRegions() -> [String: Region] {
+		return regions
+	}
+	func listFrogs() -> [String: Frog] {
+		return frogs
+	}
+	func moveFrogToDifferentRegion(frog: Frog, region: Region) -> String {
+		return "\(frog.type) frog of region \(frog.region.climateType) moved to \(region.climateType) region."
+	}
+	class var sharedInstance: BiologistFrogAnalysisAPI {
+		struct Singleton {
+			static let instance = BiologistFrogAnalysisAPI()
+		}
+		return Singleton.instance
+	}
+}
+
+let regions = BiologistFrogAnalysisAPI.sharedInstance.listRegions()
+let frogs = BiologistFrogAnalysisAPI.sharedInstance.listFrogs()
+let movedFrog = BiologistFrogAnalysisAPI.sharedInstance.moveFrogToDifferentRegion(frogs["Yellow"]!, region: regions["Tropical Wet"]!)
